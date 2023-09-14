@@ -1,0 +1,19 @@
+profil: ComboBox
+cím: TextBox
+mennyiség: TextBox
+pénznem: ComboBox
+leírás: TextBox
+esedékességi dátum: DatePicker
+ismétlődő?: CheckBox
+ismétlődési intervallum: TextBox
+ismétlődési intervallum mértékegység: ComboBox
+előnézet: GroupBox
+	profil: Label
+	cím: Label
+	mennyiség: Label
+	pénznem: Label
+	leírás: Label
+	esedékességi dátum: Label
+	ismétlődő?: Label
+	ismétlődési intervallum: Label
+	ismétlődési intervallum mértékegység: Label
