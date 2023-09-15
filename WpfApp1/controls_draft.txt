@@ -1,7 +1,7 @@
 "Új költség" cím: Label
 profil: ComboBox
 cím: TextBox
-mennyiség: TextBox
+mennyiség: TextBox convert
 pénznem: ComboBox
 leírás: TextBox
 esedékességi dátum: DatePicker
