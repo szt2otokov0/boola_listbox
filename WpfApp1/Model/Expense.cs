@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfApp1.Model
 {
-    record Expense(SpendProfile Profile, string Title, string AmountText, Currency Currency, string Description,
+    internal record Expense(SpendProfile Profile, string Title, string AmountText, Currency Currency, string Description,
         DateTime Date, bool Repeats, byte? RepeatRate, RepeatUnit? RepeatUnit
         )
     {

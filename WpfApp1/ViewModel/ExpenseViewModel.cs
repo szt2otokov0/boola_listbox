@@ -8,7 +8,7 @@ using WpfApp1.Model;
 
 namespace WpfApp1.ViewModel
 {
-    partial class ExpenseViewModel : ObservableObject
+    internal partial class ExpenseViewModel : ObservableObject
     {
 
         [ObservableProperty] private List<SpendProfile> spendProfiles = new() { SpendProfile.Personal,SpendProfile.Work};
