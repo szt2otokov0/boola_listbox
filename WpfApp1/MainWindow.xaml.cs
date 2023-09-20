@@ -23,6 +23,16 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+            repeatCheck.Checked += (_,_) =>
+            {
+                repeatField.IsEnabled = true;
+                repeatUnit.IsEnabled = true;
+            };
+            repeatCheck.Unchecked += (_,_) =>
+            {
+                repeatField.IsEnabled = false;
+                repeatUnit.IsEnabled = false;
+            };
         }
     }
 }
