@@ -18,7 +18,7 @@ namespace WpfApp1.ViewModel
         [ObservableProperty] private ObservableCollection<RepeatUnit> repeatUnits = new() { RepeatUnit.Days, RepeatUnit.Weeks, RepeatUnit.Months, RepeatUnit.Years };
         [ObservableProperty] private ObservableCollection<Expense> expenses = new();
 
-        private SpendProfile selectedSpendProfile;
+        private SpendProfile selectedSpendProfile = SpendProfile.Personal;
         public SpendProfile SelectedSpendProfile
         {
             get => selectedSpendProfile;
@@ -28,13 +28,23 @@ namespace WpfApp1.ViewModel
             }
         }
 
-        private Currency selectedCurrency;
+        private Currency selectedCurrency = Currency.HUF;
         public Currency SelectedCurrency
         {
             get => selectedCurrency;
             set {
                 SetProperty(ref selectedCurrency, value);
                 SelectedExpense = SelectedExpense with { Currency = selectedCurrency};
+            }
+        }
+        
+        private RepeatUnit selectedRepeatUnit = RepeatUnit.Days;
+        public RepeatUnit SelectedRepeatUnit
+        {
+            get => selectedRepeatUnit;
+            set {
+                SetProperty(ref selectedRepeatUnit, value);
+                SelectedExpense = SelectedExpense with { RepeatUnit = selectedRepeatUnit};
             }
         }
 

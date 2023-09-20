@@ -10,7 +10,7 @@
     <Window.DataContext>
         <vm:ExpenseViewModel/>
     </Window.DataContext>
-    <Grid>
+    <Grid Margin="2">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -43,15 +43,15 @@
             <Button Width="100" Height="25" Margin="2" Command="{Binding CreateCommand}">Új elem</Button>
             <Button Width="100" Height="35" Margin="2" Command="{Binding DeleteCommand}" CommandParameter="{Binding SelectedExpense}">Törlés</Button>
         </StackPanel>
-        <ComboBox Grid.Row="1" Grid.Column="1" ItemsSource="{Binding SpendProfiles}" SelectedItem="{Binding SelectedExpense.Profile}"></ComboBox>
+        <ComboBox Grid.Row="1" Grid.Column="1" ItemsSource="{Binding SpendProfiles}" SelectedItem="{Binding SelectedSpendProfile}"></ComboBox>
         <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding SelectedExpense.Title}"></TextBox>
         <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding SelectedExpense.AmountText}"></TextBox>
-        <ComboBox Grid.Column="1" Grid.Row="4" ItemsSource="{Binding Currencies}" SelectedItem="{Binding SelectedExpense.Currency}"></ComboBox>
+        <ComboBox Grid.Column="1" Grid.Row="4" ItemsSource="{Binding Currencies}" SelectedItem="{Binding SelectedCurrency}"></ComboBox>
         <TextBox Grid.Column="1" Grid.Row="5" Text="{Binding SelectedExpense.Description}"></TextBox>
         <DatePicker Grid.Column="1" Grid.Row="6" SelectedDate="{Binding SelectedExpense.Date}"></DatePicker>
         <CheckBox Grid.Column="1" Grid.Row="7" IsChecked="{Binding SelectedExpense.Repeats}" VerticalAlignment="Center"></CheckBox>
         <TextBox Grid.Column="1" Grid.Row="8" Text="{Binding SelectedExpense.RepeatRate}"></TextBox>
-        <ComboBox Grid.Column="1" Grid.Row="9" ItemsSource="{Binding RepeatUnits}" SelectedItem="{Binding SelectedExpense.RepeatUnit}"></ComboBox>
+        <ComboBox Grid.Column="1" Grid.Row="9" ItemsSource="{Binding RepeatUnits}" SelectedItem="{Binding SelectedRepeatUnit}"></ComboBox>
         <ListBox Grid.ColumnSpan="2" Grid.Row="11" Margin="2" ItemsSource="{Binding Expenses}" SelectedItem="{Binding SelectedExpense}"></ListBox>
     </Grid>
 </Window>
